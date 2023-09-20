@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List of Posts</title>
+</head>
+<body>
+
+<h1>My Blog Posts</h1>
+
+{% for post in posts %}
+  <p>
+      <h2>{{loop.index}}: <a href="posts/{{ post.slug }}/">{{post.title}}</a> <small>{{post.date}}</small></h2>
+      {{post.summary}}
+  </p>
+{% endfor %}
+
+</body>
+</html>
